@@ -8,7 +8,7 @@
 sudo apt install -y git
 ```
 
-## 使用
+## 基本操作
 
 ### 全局配置
 
@@ -45,28 +45,6 @@ git commit -m 'init import'
 
 如果不使用 `-m` 参数，会弹出编辑器让你写注释信息。
 
-### 查看状态
-
-不指定目录查看整个 git 仓库的工作树状态:
-
-```bash
-git status
-```
-
-查看当前目录的状态:
-
-```bash
-git status .
-```
-
-### 配置别名
-
-用别名代替常用指令，简化指令操作:
-
-```bash
-git config --global alias.st status
-```
-
 ## 远程仓库
 
 ### 克隆
@@ -101,7 +79,7 @@ git pull
 git pull --all
 ```
 
-## 分支
+## 分支管理
 
 ### 新建分支
 
@@ -154,3 +132,61 @@ git branch -d dev
 ```bash
 git branch -D <BranchName>
 ```
+
+## 提交与修改
+
+### 查看状态
+
+不指定目录查看整个 git 仓库的工作区状态:
+
+```bash
+git status
+```
+
+查看当前目录的状态:
+
+```bash
+git status .
+```
+
+### 配置别名
+
+用别名代替常用指令，简化指令操作:
+
+```bash
+git config --global alias.st status
+```
+
+后面即可使用别名来操作:
+
+```bash
+git st .
+```
+
+### 删除文件
+
+将文件/目录从暂存区和工作区删除:
+
+```bash
+git rm -r <file>
+```
+
+### 移出版本控制
+
+将文件/目录从暂存区移除，不再参与 git 版本控制:
+
+```bash
+git rm -r --cached <file>
+```
+
+### 撤销修改
+
+撤销当前工作区的修改:
+
+```bash
+git restore .
+```
+
+## 参考网站
+
+[1] [Git 教程](https://www.runoob.com/git/git-tutorial.html)
