@@ -52,12 +52,12 @@ git commit -m 'init import'
 将远程服务器上的 git 仓库克隆到本地:
 
 ```bash
-git clone https://github.com/i-black-angel/git-guide.git
+git clone https://gitee.com/iblackangel/git-guide.git
 ```
 
 ### 推送改动
 
-好了，你的改动已经通过 `git commit` 提交到本地仓库了，现在将本地仓库同步到远程仓库去:
+好了，你的改动已经通过 `git add` 与 `git commit` 提交到本地仓库了，现在将本地仓库同步到远程仓库去:
 
 ```bash
 git push origin master
@@ -65,3 +65,16 @@ git push origin master
 
 可以将 *master* 换成你想要推送的其他分支。
 
+### 获取更新
+
+获取当前分支的远程更新内容到本地:
+
+```bash
+git pull
+```
+
+获取所有的远程更新（包括其他分支）到本地:
+
+```bash
+git pull --all
+```
