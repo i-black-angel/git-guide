@@ -59,6 +59,14 @@ git status
 git status .
 ```
 
+### 配置别名
+
+用别名代替常用指令，简化指令操作:
+
+```bash
+git config --global alias.st status
+```
+
 ## 远程仓库
 
 ### 克隆
@@ -92,6 +100,8 @@ git pull
 ```bash
 git pull --all
 ```
+
+## 分支
 
 ### 新建分支
 
