@@ -45,6 +45,20 @@ git commit -m 'init import'
 
 如果不使用 `-m` 参数，会弹出编辑器让你写注释信息。
 
+### 查看状态
+
+不指定目录查看整个 git 仓库的工作树状态:
+
+```bash
+git status
+```
+
+查看当前目录的状态:
+
+```bash
+git status .
+```
+
 ## 远程仓库
 
 ### 克隆
@@ -77,4 +91,56 @@ git pull
 
 ```bash
 git pull --all
+```
+
+### 新建分支
+
+从当前分支创建新的分支 *dev*:
+
+```bash
+git checkout -b dev
+```
+
+### 查看分支
+
+列出所有分支，包括当前分支及远程分支:
+
+```bash
+git branch -a
+```
+
+### 切换分支
+
+从 *dev* 分支切换回 *master* 分支:
+
+```bash
+git checkout master
+```
+
+### 合并分支
+
+将 *dev* 分支的改动合并到 *master* 分支:
+
+```bash
+git merge dev
+```
+
+或者在合并分支时让提交以线性的方式呈现:
+
+```bash
+git rebase dev
+```
+
+### 删除分支
+
+清理合并之后的分支:
+
+```bash
+git branch -d dev
+```
+
+清理还未合并的分支:
+
+```bash
+git branch -D <BranchName>
 ```
