@@ -5,7 +5,7 @@
 命令行执行安装命令:
 
 ```bash
-sudo apt install -y git
+sudo apt install -y git gitk
 ```
 
 ## 基本操作
@@ -113,7 +113,7 @@ git checkout master
 git merge dev
 ```
 
-或者在合并分支时让提交以线性的方式呈现:
+或者在合并分支时让提交以线性的方式进行合并:
 
 ```bash
 git rebase dev
@@ -157,11 +157,7 @@ git status .
 git config --global alias.st status
 ```
 
-后面即可使用别名来操作:
-
-```bash
-git st .
-```
+后面即可使用别名来操作 `git st` 等效于 `git status`
 
 ### 删除文件
 
@@ -185,6 +181,28 @@ git rm -r --cached <file>
 
 ```bash
 git restore .
+```
+
+### 查看日志
+
+查看历史提交记录
+
+```bash
+git log
+```
+
+### 版本回退
+
+回退到指定版本，工作区文件内容保持不变:
+
+```bash
+git reset f5dccef
+```
+
+回退某个文件的版本到上一个版本:
+
+```bash
+git reset HEAD^ hello.cpp
 ```
 
 ## 参考网站
