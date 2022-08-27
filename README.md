@@ -52,7 +52,7 @@ git commit -m 'init import'
 将本地仓库推送到远程服务器:
 
 ```bash
-git remote add origin git@gitee.com:iblackangel/git-guide.git
+git remote add origin git@github.com:i-black-angel/git-guide.git
 git push -u origin master
 ```
 
@@ -61,7 +61,7 @@ git push -u origin master
 将远程服务器上的 git 仓库克隆到本地:
 
 ```bash
-git clone https://gitee.com/iblackangel/git-guide.git
+git clone git@github.com:i-black-angel/git-guide.git
 ```
 
 ### 推送改动
