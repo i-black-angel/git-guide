@@ -47,6 +47,15 @@ git commit -m 'init import'
 
 ## 远程仓库
 
+### 推送本地仓库
+
+将本地仓库推送到远程服务器:
+
+```bash
+git remote add origin git@gitee.com:iblackangel/git-guide.git
+git push -u origin master
+```
+
 ### 克隆
 
 将远程服务器上的 git 仓库克隆到本地:
